@@ -1,0 +1,95 @@
+/* Toàn bộ nền của trang */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('assets\\doraemon-6ag1ry72uy2s9jmg.jpg'); /* Ảnh nền của bạn */
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+/* Lớp phủ mờ trắng trên ảnh nền để dễ đọc nội dung */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.85); /* độ mờ */
+  z-index: -1;
+}
+
+/* Header */
+header {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Bố cục chính: chữ trái - ảnh phải */
+.content-wrapper {
+  display: flex;
+  max-width: 1000px;
+  margin: 40px auto;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+/* Phần nội dung văn bản */
+.text-content {
+  flex: 1;
+  padding: 30px;
+  text-align: left;
+}
+
+/* Phần chứa hình ảnh bên phải */
+.image-content {
+  flex: 1;
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-content img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+h1, h2 {
+  color: #2c3e50;
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+a {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.facebook-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 24px;
+  background-color: #4267B2;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.facebook-button:hover {
+  background-color: #365899;
+}
